@@ -22,7 +22,7 @@ Encore
         // if versionning is enabled, add the file hash too
         //to: 'images/[path][name].[ext]',
 
-        //onely copy files matching this pattern
+        //only copy files matching this pattern
         //pattern: /\.(png|jpg|jpeg)$/
     })
 
@@ -36,7 +36,7 @@ Encore
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
     .addEntry('app', './assets/app.js')
-    //.addEntry('page1', './assets/page1.js')
+    .addEntry('fond', './assets/images/fond.jpeg')
     //.addEntry('page2', './assets/page2.js')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.

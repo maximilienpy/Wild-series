@@ -1,8 +1,16 @@
+@import "~bootstrap/scss/bootstrap";
+
+
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(33, 186, 197);
 }
 
 $theme-colors: (
-  "bg-primary":  #E2E77F,
-  "bg-secondary": #EBCF94,
+  "bg-primary":  #cac725,
+  "bg-secondary": #b33c85,
 );
+
+nav {
+  background-color: #b33c85;
+  
+}
