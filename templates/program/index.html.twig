@@ -2,13 +2,25 @@
 
 {% block title %}
 
-<title>Hello ProgramController!</title>
+<title>All programs</title>
 {% endblock %}
 
 
 
 {% block body %}
 
-    <h1>{{ website }} index</h1>
+    <h1> Toutes les series de Wild series: </h1>
 
+    {% for program in programs %}
+        <div>
+            <h2>{{ loop.index}} / {{ program.title}} - Categorie : {{ program.category.name }}</h2>
+            <p>{{ program.summary }}</p>
+        </div>
+    {% else %}
+        Aucune série trouvée.
+    {% endfor %}
+
+    <a href="{{ path('app_index') }}">
+    Retour à l'acceuil
+    </a>
 {% endblock %}

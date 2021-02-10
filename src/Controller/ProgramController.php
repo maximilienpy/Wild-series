@@ -2,22 +2,34 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Entity\Program;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 
 
 class ProgramController extends AbstractController
 {
     /**
-     * @Route("/program", name="program")
+     * 
+     * montre toutes les lignes de program's entity
+     * 
+     * 
+     * @Route("/programs", name="program_")
+     * @return Response A response instance
+     * 
      */
     public function index(): Response
     {
+
+        $programs = $this->getDoctrine()
+            ->getRepository(Program::class)
+            ->findAll();
+
         return $this->render('program/index.html.twig', [
-            'website' => 'Wild Séries',
-        ]);
+            'programs' => $programs]
+        );
     }
 
     /** 
