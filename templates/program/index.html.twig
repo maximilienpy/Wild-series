@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% extends "base.html.twig" %}
 
 {% block title %}
 
@@ -15,6 +15,7 @@
         <div>
             <h2>{{ loop.index}} / {{ program.title}} - Categorie : {{ program.category.name }}</h2>
             <p>{{ program.summary }}</p>
+            <a href="{{ path("program_list", {id: program.id }) }}">Voir la fiche</a>
         </div>
     {% else %}
         Aucune série trouvée.
