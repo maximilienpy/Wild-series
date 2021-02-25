@@ -13,7 +13,7 @@
 
     {% for program in programs %}
         <div>
-            <h2>{{ loop.index}} / {{ program.title}} - Categorie : {{ program.category.name }}</h2>
+            <h2>{{ loop.index }} / {{ program.title }} - Categorie : {{ program.category.name }}</h2>
             <p>{{ program.summary }}</p>
             <a href="{{ path("program_list", {id: program.id }) }}">Voir la fiche</a>
         </div>
